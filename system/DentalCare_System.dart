@@ -4,7 +4,7 @@ import '../models/appointment.dart';
 
 class DentalcareSystem {
   List<Appointment> appointments = [];
-  List<Doctor> _doctor = [];
+  List<Doctor> doctors = [];
   void bookAppointment(
     Patient patient,
     Doctor doctor,
@@ -40,9 +40,18 @@ class DentalcareSystem {
     }
   }
 
-  void ShowAllDoctors() {
-    for (var doctor in _doctor) {
-      print("Dr.${doctor.name}");
+  void showAllDoctors() {
+    if (doctors.isEmpty) {
+      print("There are no doctors currently");
+    } else {
+      print("List of Doctors:");
+      for (var doctor in doctors) {
+        print("Dr.${doctor.name} and the specialty ${doctor.specialty}");
+      }
     }
+  }
+
+  void addDoctor(Doctor doctor) {
+    doctors.add(doctor);
   }
 }

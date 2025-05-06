@@ -8,6 +8,9 @@ void main() {
   var Doctor1 = Doctor(name: "Hosam", specialty: "General Dentistry");
   var Doctor2 = Doctor(name: "Mohammad", specialty: "Endodontics");
   var Doctor3 = Doctor(name: "Abd Alraheem", specialty: "Orthodontics");
+  DentalCare.addDoctor(Doctor1);
+  DentalCare.addDoctor(Doctor2);
+  DentalCare.addDoctor(Doctor3);
 
   var patient1 = Patient(name: "Ali", phone_num: 0795719299);
   var patient2 = Patient(name: "omar", phone_num: 0795789599);
@@ -18,6 +21,4 @@ void main() {
   DentalCare.bookAppointment(patient3, Doctor2, "28-5-2025", "3pm");
 
   DentalCare.ShowAllAppointment();
-
-  DentalCare.ShowAllDoctors();
 }
