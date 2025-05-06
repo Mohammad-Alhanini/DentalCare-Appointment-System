@@ -4,7 +4,7 @@ import '../models/appointment.dart';
 
 class DentalcareSystem {
   List<Appointment> appointments = [];
-
+  List<Doctor> _doctor = [];
   void bookAppointment(
     Patient patient,
     Doctor doctor,
@@ -20,6 +20,7 @@ class DentalcareSystem {
         return;
       }
     }
+
     Appointment newAppointment = Appointment(
       patient: patient,
       doctor: doctor,
@@ -38,46 +39,10 @@ class DentalcareSystem {
       for (var appoint in appointments) print(appoint.DisplayAppointmentInfo());
     }
   }
+
+  void ShowAllDoctors() {
+    for (var doctor in _doctor) {
+      print("Dr.${doctor.name}");
+    }
+  }
 }
-
-  // bool isAvailable(Doctor doctor, String date, String time) {
-  //   for (var appointment in appointments) {
-  //     if (appointment.date == date &&
-  //         appointment.time == time &&
-  //         appointment.doctor == doctor) {
-  //       return false;
-  //     }
-  //   }
-  //   return true;
-  // }
-
-  // bool bookAppointment(
-  //   Patient patient,
-  //   Doctor doctor,
-  //   String date,
-  //   String time,
-  // ) {
-  //   if (isAvailable(doctor, date, time)) {
-  //     Appointment newAppointment = Appointment(
-  //       patient: patient,
-  //       doctor: doctor,
-  //       date: date,
-  //       time: time,
-  //     );
-  //     appointments.add(newAppointment);
-  //     print('The appointment has been booked successfully.');
-  //     return true;
-  //   } else {
-  //     print('This appointment is not available');
-  //     return false;
-  //   }
-  // }
-
-  // void ShowAllAppointment() {
-  //   if (appointments.isEmpty) {
-  //     print("There are no appointments currently");
-  //   } else {
-  //     for (var appoint in appointments) print(appoint.DisplayAppointmentInfo());
-  //   }
-  // }
-//}

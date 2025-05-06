@@ -15,6 +15,6 @@ class Appointment {
   });
 
   String DisplayAppointmentInfo() {
-    return "The patient ${patient.name} has an appointment with the doctor${doctor.name} on the date ${date} at ${time} o'clock";
+    return "The patient ${patient.name} has an appointment with the doctor ${doctor.name} on the date ${date} at ${time} o'clock";
   }
 }
