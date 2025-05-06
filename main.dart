@@ -21,4 +21,6 @@ void main() {
   DentalCare.bookAppointment(patient3, Doctor2, "28-5-2025", "3pm");
 
   DentalCare.ShowAllAppointment();
+
+  DentalCare.showAllDoctors();
 }
